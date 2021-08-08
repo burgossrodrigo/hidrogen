@@ -16,6 +16,7 @@ import SideDrawer from './SideDrawer';
 import MenuIcon from '@material-ui/icons/Menu';
 import { makeStyles } from '@material-ui/core/styles';
 import Carousel from './Carousel';
+import Image from 'next/image';
 
 const useStyle = makeStyles((theme) => ({
 	
@@ -115,7 +116,7 @@ export default function Navigation(){
 			<Toolbar>
 			<Box className={classes.titleBox} style={{display: 'flex', right: '2vw'}} >
 			
-			<img className={styles.imageIcon} src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Dr_Manhattan_symbol.svg"/>
+			<Image className={styles.imageIcon} src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Dr_Manhattan_symbol.svg"/>
 			
 			<Typography variant='h4' className={classes.title}> 
 			

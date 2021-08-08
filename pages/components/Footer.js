@@ -74,9 +74,16 @@ import styles from '../../styles/Home.module.css';
 		socialList:{
 			
 			position: 'relative',
-			left: '60vh'
+			left: '30vw'
 			
-		}		
+		},
+
+		comtactForm:{
+			
+			left: '30vw',
+			position: 'relative'
+			
+		}	
 		
 		
 	}));
@@ -89,21 +96,27 @@ export default function Footer(){
 
 	return(
 		<>
+
 		<Container className={styles.footer}>
-		<box className={classes.socialList}>
-			<TelegramIcon className={classes.icon} />
-			<RedditIcon className={classes.icon} />
-			<InstagramIcon className={classes.icon} />
-			<TwitterIcon  className={classes.icon} />
-			<FacebookIcon className={classes.icon} />
-		</box>
-		
-		<box className={classes.contactForm}>
-			<form className={classes.form}>
-				<TextField id="outlined-basic" className={classes.textInput} label="Your email" variant="standard" />
-				<Button variant="contained">Subscribe</Button>
-			</form>
-		</box>
+		<Col className={styles.marginLeft}>
+			<Row>		
+				<box className={classes.socialList}>
+					<TelegramIcon className={classes.icon} />
+					<RedditIcon className={classes.icon} />
+					<InstagramIcon className={classes.icon} />
+					<TwitterIcon  className={classes.icon} />
+					<FacebookIcon className={classes.icon} />
+				</box>
+			</Row>
+			<Row>
+				<box className={classes.contactForm}>
+					<form className={classes.form}>
+						<TextField id="outlined-basic" className={classes.textInput} label="Your email" variant="standard" />
+						<Button variant="contained">Subscribe</Button>
+					</form>
+				</box>
+			</Row>
+		</Col>
 		<div className={styles.listLink}>
 		<Row xs={1} sm={2} md={3} lg={4} xl={4}>
 				<ul>

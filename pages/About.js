@@ -70,8 +70,8 @@ export default function About(){
 				<Col>
 				<h3>About Hidrogen</h3>
 				<p>
-					As hidrogen is the rocket fuel, Hidrogen born as a crypto dashboard that aim to help small gem tokens to reach it's maximum potential through exploratory analisis of it performance and data amostrage.
-					Diferent from coimarketcap we do not need to wait a token to reach a minimum quantity of holders to display it's price, for example. 
+					As hidrogen is the rocket fuel, Hidrogen born as a crypto dashboard that aim to help small gem tokens to reach it&apos;s maximum potential through exploratory analisis of it performance and data amostrage.
+					Diferent from coimarketcap we do not need to wait a token to reach a minimum quantity of holders to display it&apos;s price, for example. 
 					And we also aim to brings bout free and sponsored content for any solidity developer or company who want to bring they assets to the eye of the public.
 				</p>
 				</Col>

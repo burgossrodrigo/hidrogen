@@ -25,6 +25,7 @@ import { Toolbar,
 import { Navbar, Nav, Container, Row, Col, Dropdown } from 'react-bootstrap';
 import Navigation from './components/Navigation.js';
 import Footer from './components/Footer.js';
+import Script from 'next/script';
 
 const coinGeckoClient = new CoinGecko();
 
@@ -188,8 +189,8 @@ const useStyles = makeStyles({
         <title>Hidrogen</title>
         <meta name="Hidrogen" content="Binance Smart Chain token dashboard" />
         <link rel="icon" href="/favicon.ico" />
-		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-		<script src="https://widgets.coingecko.com/coingecko-coin-price-chart-widget.js"></script>
+		<Script src="https://cdn.plot.ly/plotly-latest.min.js"></Script>
+		<Script src="https://widgets.coingecko.com/coingecko-coin-price-chart-widget.js"></Script>
       </Head>
 	  <Container>
 		<Navigation />
