@@ -189,8 +189,8 @@ const useStyles = makeStyles({
         <title>Hidrogen</title>
         <meta name="Hidrogen" content="Binance Smart Chain token dashboard" />
         <link rel="icon" href="/favicon.ico" />
-		<Script src="https://cdn.plot.ly/plotly-latest.min.js"></Script>
-		<Script src="https://widgets.coingecko.com/coingecko-coin-price-chart-widget.js"></Script>
+		<script async src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+		<script async src="https://widgets.coingecko.com/coingecko-coin-price-chart-widget.js"></script>
       </Head>
 	  <Container>
 		<Navigation />
