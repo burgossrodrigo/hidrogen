@@ -1,0 +1,230 @@
+
+@media (max-width:375px){
+		
+		.mainChart{
+			
+			display: none;
+			
+		}
+		
+		.coinGeckoChart{
+			
+			margin-top: 10vh;
+			
+		}
+		
+		.img{
+			
+			display: none;
+			
+		}
+	
+		.menuIcon{
+		
+			margin-left: 42vw;
+			
+		}
+		
+		.breadCrumbs{
+			
+			display: none;
+			
+		}
+		
+		.navBar{
+			
+			width: 100%;
+			
+		}
+		
+		.titlePadding{
+			
+			    padding-left: 20px;			
+			
+		}
+		
+			.card{
+		
+		height: 35vh;
+		marginTop: 15vh;
+		margin: 6px;
+		margin-top: 5vh;
+		
+	}
+		
+			.imageIcon{
+		
+		width: 30px;
+		height: 30px;
+		margin-top: 5px;
+		    margin-right: 2vw;
+	}
+	
+	.table{
+		
+		margin-top: 15vh;
+		
+	}
+
+	.socialList{
+		
+		    position: relative;
+    left: 35vw;
+		
+	}	
+	
+	
+}
+
+@media (min-width: 376px) and (max-width: 765px) { 
+
+		.mainChart{
+			
+			margin-top: 10vh;			
+			
+		}
+		
+		.coinGeckoChart{
+			
+			margin-top: 10vh;
+			
+		}
+	
+		.menuIcon{
+		
+			display: none;
+			
+		}
+		
+		.breadCrumbs{
+			
+width: 100vw;
+    margin-left: 25vw;
+			
+		}
+		
+		.navBar{
+			
+			width: 100%;
+			
+		}	
+
+		.titlePadding{
+			
+		margin-right: 62vw;			
+			
+		}
+		
+			.card{
+		
+		height: 35vh;
+		marginTop: 15vh;
+		margin: 6px;
+		margin-top: 5vh;
+		
+	}
+		
+			.imageIcon{
+		
+		width: 30px;
+		height: 30px;
+		margin-top: 5px;
+		    margin-right: 2vw;
+	}
+	
+		.table{
+		
+		margin-top: 15vh;
+		
+	}
+	
+	.socialList{
+		
+		    position: relative;
+    left: 35vw;
+		
+	}	
+	
+ }
+
+@media (min-width:768px){
+	
+	.mainChart{
+	
+	margin-top: 10vh;
+	
+	
+	}
+
+	.coinGeckoChart{
+		
+		margin-top: 10vh;
+		
+	}
+
+	.breadCrumbs{
+		
+	width: 100vw;
+    margin-left: 25vw;
+		
+	}
+
+	.titlePadding{
+		
+		float: left;
+		position: relative;
+		
+	}
+
+	.menuIcon{
+		
+		display: none;
+		
+	}
+	
+	.navBar{
+		
+		width: 100%;
+		
+	}
+	
+	.imageIcon{
+		
+		width: 30px;
+		height: 30px;
+		margin-top: 5px;
+		    margin-right: 1.9vw;
+	}
+	
+	.card{
+		
+		height: 35vh;
+		marginTop: 15vh;
+		margin: 6px;
+		margin-top: 5vh;
+		
+	}
+	
+	.table{
+		
+		margin-top: 15vh;
+		
+	}
+	
+	.socialList{
+		
+		    position: relative;
+    left: 32vw;
+		
+	}
+	
+	.footer{
+		
+		margin-top: 15vh;
+		
+	}
+	
+}
+
+
+	
