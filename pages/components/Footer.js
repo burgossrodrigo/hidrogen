@@ -96,8 +96,6 @@ export default function Footer(){
 
 	return(
 		<>
-
-		<Container className={styles.footer}>
 		<Col className={styles.marginLeft}>
 			<Row>		
 				<box className={classes.socialList}>
@@ -143,7 +141,6 @@ export default function Footer(){
 		</Row>
 		</div>
 		<Typography className={classes.copyRight}variant='h6'>© 2020 Copyright: Hidrogen All Rights Reserved</Typography>
-		</Container>
 		</>
 	);
 

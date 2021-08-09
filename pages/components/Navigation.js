@@ -67,7 +67,7 @@ const useStyle = makeStyles((theme) => ({
 
 		flexGrow: 1,
 		position: 'relative',
-		
+			
 	},
 	
 	  link: {
@@ -112,7 +112,6 @@ export default function Navigation(){
 		const classes = useStyle();
 		
 			return (<>
-			<Container>
 			
 			<Toolbar>
 			<Box className={classes.titleBox} style={{display: 'flex', right: '2vw'}} >
@@ -156,6 +155,5 @@ export default function Navigation(){
 			<Box className={classes.carousel}>
 				<Typography variant='h4'><Carousel /></Typography>
 			</Box>
-		</Container>
 
 </>)}
