@@ -37,24 +37,6 @@ export default function Home(props) {
     	 const { bnbData } = props.data;
 		 console.log(props.data);
 
-	const useStyle = makeStyles((theme) => ({
-
-			header: {
-				
-				
-				[theme.breakpoints.only('xs')]: {
-					flexGrow: 1
-				},
-				
-				[theme.breakpoints.between('sm', 'xl')]: {
-					flexGrow: 1
-				}
-				
-			}
-		
-}));
-
-	const classes = useStyle();
 	
 		const fetchData = async () => {
 	  let bnbChart = { index: [], price: [], volumes: [] };
@@ -160,7 +142,7 @@ export default function Home(props) {
 
 	
   return (
-    <>
+    <div>
 	
       <Head>
         <title>Hidrogen</title>
@@ -169,15 +151,15 @@ export default function Home(props) {
 		<script async src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 		<script async src="https://widgets.coingecko.com/coingecko-coin-price-chart-widget.js"></script>
       </Head>
-	  <Container>
-		<Navigation />
-		<Container className={styles.mainChart}>
+	    <Navigation />
+	    <Container>
+		<div className={styles.mainChart}>
 				<h2>Sponsored Chart</h2>
 				<h2 className='text-center text-primary'>BNB PRICE: $ {latestPrice}</h2>
 				<div id='chart' className='p-0 m-0'></div>
-		</Container>
+		</div>
 			
-			<Container className={styles.coinGeckoChart}>
+			<div className={styles.coinGeckoChart}>
 				<h5>Sponsored tokens</h5>
 				<Row xs={1} sm={2} md={'auto'} lg={'3'} xl={'auto'} >
 					
@@ -195,10 +177,11 @@ export default function Home(props) {
 					
 					
 				</Row>
+			</div>
 		<Footer />		
-			</Container>	
-		</Container>
-    </>
+			
+		</Container>	
+    </div>
 	
 	
   )
@@ -207,19 +190,15 @@ export default function Home(props) {
 export async function getStaticProps(context) {
   const res = await fetch('https://api.coingecko.com/api/v3/coins/binancecoin/market_chart?vs_currency=usd&days=1&interval=1m')
   const data = await res.json()
-  const resBsc = await fetch('https://api.bscscan.com/api?module=token&action=tokeninfo&contractaddress=0xb1fccd3aa9661d05b64e077b19acd815b616bc38&apikey=VPBWF48NC149A1VJA5MDHUNJK74N1KJB2S');
-  const dataBsc = await resBsc.json()	
-  const resToken = await fetch('https://api.pancakeswap.info/api/v2/tokens');
-  const dataToken = await resToken.json()
   
-  if (!data || !dataBsc) {
+  if (!data) {
     return {
       notFound: true,
     }
   }
 
   return {
-    props: { data, dataToken } // will be passed to the page component as props
+    props: { data } // will be passed to the page component as props
 
   }
 }

@@ -41,7 +41,9 @@ import styles from '../../styles/Home.module.css';
 
 		icon:{
 			
-			marginRight: '3vw'
+			position: 'relative',
+			marginRight: '3vw',
+			marginTop: '15vw'
 			
 		},
 

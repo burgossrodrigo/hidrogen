@@ -1,4 +1,4 @@
-import { Navbar, Nav, Container, Row, Col, Dropdown } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import { IoIosMenu } from 'react-icons/io';
 import styles from '../../styles/Home.module.css'
 import { Toolbar, 
@@ -45,11 +45,12 @@ const useStyle = makeStyles((theme) => ({
   
     breadCrumbs:{
 	  
-	  		[theme.breakpoints.only('xs')]: {
+	  	[theme.breakpoints.only('xs')]: {
 			
-		display: 'none',
+		display: 'none'
 			
 		},
+		
 		[theme.breakpoints.between('sm', 'xl')]: {
 			
 			display: 'flex',
@@ -93,7 +94,8 @@ const useStyle = makeStyles((theme) => ({
 	  
 	  display: 'flex',
 	  position: 'relative',
-	  width: '30vw'
+	  width: '30vw',
+	  right: '2vw'
 	  
   },
   
@@ -111,20 +113,19 @@ export default function Navigation(){
 	
 		const classes = useStyle();
 		
-			return (<>
+			return (<Box>
 			
 			<Toolbar>
-			<Box className={classes.titleBox} style={{display: 'flex', right: '2vw'}} >
-			
-			<Image width={35} height={30} src={hidrogen}/>
-			
-			<Typography variant='h4' className={classes.title}> 
-			
-				Hidrogen 
-			
-			</Typography>
-			</Box>  
-			  <Breadcrumbs className={classes.breadCrumbs}>
+
+			<div className={classes.titleBox}>
+				
+				<Typography variant='h4' className={classes.title}> 
+				<Image width={35} height={30} src={hidrogen}/>
+					Hidrogen 
+				</Typography>
+			</div>
+
+			  <Breadcrumbs className={styles.breadCrumbs}>
 			  <Link className={classes.link} color="inherit" href='' variant='inherit' >
 				Home
 			  </Link>
@@ -156,4 +157,4 @@ export default function Navigation(){
 				<Typography variant='h4'><Carousel /></Typography>
 			</Box>
 
-</>)}
+</Box>)}

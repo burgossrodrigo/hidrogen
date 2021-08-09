@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Head from 'next/head';
 import Navigation from './components/Navigation.js';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, List, ListItem } from '@material-ui/core';
@@ -11,39 +12,6 @@ import computer from './img/computer.jpg';
 import Image from 'next/image';
 import Footer from './components/Footer.js';
 
-
-
-export default function About(){
-
-	const useStyle = makeStyles((theme) => ({
-	
-		card:{
-			
-			height: '35vh',
-			marginTop: '15vh'
-			
-		},
-		
-		cardHeader:{
-			
-			borderBottom: '1px solid ',
-			textAlign: 'center'
-			
-		},
-		
-		letterSpacing: {
-			
-			letterSpacing: '5px',
-			marginTop: '5vh'
-			
-		}
-		
-		
-		
-		
-	
-	}));
-	
 	const fadeInLeftAnimation = keyframes`${fadeInLeft}`;
  
 	const FadeLeftDiv = styled.div`
@@ -58,12 +26,22 @@ export default function About(){
 	  margin-top: 15vh;
 	`;	
 
-	const classes = useStyle();
+
+
+
+export default function About(){
+
 	
 	return (
 	
-		<Container >
+			<div>
+		  <Head>
+			<title>Hidrogen</title>
+			<meta name="Hidrogen - Pancake TOP 100" content="Binance Smart Chain token dashboard" />
+			<link rel="icon" href="/favicon.ico" />
+		  </Head>			
 			<Navigation />
+			<Container>
 			
 			<FadeLeftDiv>
 			<Row xs={1} sm={2} md={2} lg={2} xl={2}>
@@ -191,8 +169,9 @@ export default function About(){
 				
 				</Row>
 			</FadeRightDiv>
-		<Footer />	
-		</Container>
+		<Footer />
+		</Container>	
+		</div>
 	
 	);
 

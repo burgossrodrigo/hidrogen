@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import styles from '../styles/Home.module.css';
 import { Container, tr, Table, tbody, th, thead} from 'react-bootstrap';
 import Footer from './components/Footer.js';
+import Head from 'next/head';
 
 export default function Pancake(props) {
 		
@@ -11,24 +12,6 @@ export default function Pancake(props) {
 		 var tokens = Object.entries(props.data);
 		 console.log(props.data.data);
 
-	const useStyle = makeStyles((theme) => ({
-
-			header: {
-				
-				
-				[theme.breakpoints.only('xs')]: {
-					flexGrow: 1
-				},
-				
-				[theme.breakpoints.between('sm', 'xl')]: {
-					flexGrow: 1
-				}
-				
-			}
-		
-}));
-
-	const classes = useStyle();
 		
 	const formatPercent = number =>
 	`${new Number(number).toFixed(2)}%`
@@ -47,9 +30,15 @@ export default function Pancake(props) {
 	)
 		
   return (
-		<Container>
+		<div>
+		  <Head>
+			<title>Hidrogen</title>
+			<meta name="Hidrogen - Pancake TOP 100" content="Binance Smart Chain token dashboard" />
+			<link rel="icon" href="/favicon.ico" />
+		  </Head>		
 		<Navigation />
-		<Table className={styles.table} size="sm" striped bordered hover aria-label='pancakeswap-api'>
+		<Container>
+		<Table className={styles.table} size="lg" striped bordered hover aria-label='pancakeswap-api'>
 			<thead>
 				<tr>
 					<th>Token Name</th>
@@ -75,8 +64,33 @@ export default function Pancake(props) {
 			))}
 			</tbody>
 		</Table>
+		
+				<Table className={styles.tableSmall} size="sm" striped bordered hover aria-label='pancakeswap-api'>
+			<thead>
+				<tr>
+					<th>Token Name</th>
+					<th>Price</th>		
+				</tr>
+			</thead >
+			<tbody>
+			{Object.values(props.data.data).map((token) => (
+			
+
+				
+				<tr key={Object.keys(props.data.data)}>
+					<th>{token.name}</th>					
+					<th>USD {token.price}</th>
+				</tr>
+				
+	
+					
+			))}
+			</tbody>
+		</Table>
 	  <Footer />
 	  </Container>
+	  </div>
+	  
   
  )
 };

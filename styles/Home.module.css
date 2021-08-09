@@ -60,18 +60,31 @@
 		    margin-right: 2vw;
 	}
 	
-	.table{
+		.table{
 		
-		margin-top: 15vh;
+		display: none;
 		
 	}
+	
+		.tableSmall{
+			
+		margin-top: 15vh;	
+			
+		}
 
 	.socialList{
 		
 		    position: relative;
     left: 35vw;
 		
-	}	
+	}
+	
+	.titleBox{
+		
+		display: flex;
+		flexDirection: row;
+		
+	}
 	
 	
 }
@@ -98,8 +111,11 @@
 		
 		.breadCrumbs{
 			
-width: 100vw;
-    margin-left: 25vw;
+			display: flex;
+			fontSize: 10px;
+			width: 100vw;
+			float: right;
+			marginLeft: 2vw;
 			
 		}
 		
@@ -134,14 +150,27 @@ width: 100vw;
 	
 		.table{
 		
-		margin-top: 15vh;
+		display: none;
 		
 	}
+	
+		.tableSmall{
+			
+		margin-top: 15vh;	
+			
+		}
 	
 	.socialList{
 		
 		    position: relative;
     left: 35vw;
+		
+	}
+
+	.titleBox{
+		
+		display: flex;
+		flexDirection: row;
 		
 	}	
 	
@@ -211,6 +240,12 @@ width: 100vw;
 		
 	}
 	
+	.tableSmall{
+		
+		display: none;
+		
+	}
+	
 	.socialList{
 		
 		    position: relative;
@@ -227,6 +262,13 @@ width: 100vw;
 	.marginLeft{
 		
 		width: 35vw;
+		
+	}
+	
+	.titleBox{
+		
+		display: flex;
+		flexDirection: row;
 		
 	}
 	
