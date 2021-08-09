@@ -17,6 +17,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { makeStyles } from '@material-ui/core/styles';
 import Carousel from './Carousel';
 import Image from 'next/image';
+import hidrogen from '../img/hidrogen.png';
 
 const useStyle = makeStyles((theme) => ({
 	
@@ -66,7 +67,7 @@ const useStyle = makeStyles((theme) => ({
 
 		flexGrow: 1,
 		position: 'relative',
-		right: '2vw'
+		
 	},
 	
 	  link: {
@@ -116,7 +117,7 @@ export default function Navigation(){
 			<Toolbar>
 			<Box className={classes.titleBox} style={{display: 'flex', right: '2vw'}} >
 			
-			<Image className={styles.imageIcon} src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Dr_Manhattan_symbol.svg"/>
+			<Image width={35} height={30} src={hidrogen}/>
 			
 			<Typography variant='h4' className={classes.title}> 
 			
