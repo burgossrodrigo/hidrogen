@@ -5,12 +5,14 @@ import styles from '../styles/Home.module.css';
 import { Container, tr, Table, tbody, th, thead} from 'react-bootstrap';
 import Footer from './components/Footer.js';
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function Pancake(props) {
 		
 		 const [tokenData, setTokenData] = useState({});
 		 var tokens = Object.entries(props.data);
 		 console.log(props.data.data);
+
 
 		
 	const formatPercent = number =>
@@ -53,7 +55,7 @@ export default function Pancake(props) {
 
 				
 				<tr key={Object.keys(props.data.data)}>
-					<th>{token.name}</th>					
+				<th><Link href={`/token/${token.symbol}`}>{token.name}</Link></th>					
 					<th>{token.symbol}</th>
 					<th>USD {token.price}</th>
 					<th>{token.price_BNB}</th>
