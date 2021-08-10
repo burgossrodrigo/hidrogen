@@ -54,15 +54,15 @@ export default function TemporaryDrawer({children, anchor, left}) {
     >
       <List>
         <ListItem>
-			Home
+			<Link href='/'>Home</Link>
 		</ListItem>
 		<Divider />
         <ListItem>
-			About
+			<Link  href='About' >About</Link>
 		</ListItem>
 		<Divider />
-		<ListItem>
-			Top 1000 PancakeSwap
+		<ListItem  href='Pancake'>
+			Top 100 PancakeSwap
 		</ListItem>
 		<Divider />
 		<ListItem>
