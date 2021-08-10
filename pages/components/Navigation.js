@@ -37,7 +37,7 @@ export default function Navigation(){
 			</div>
 			  <div className={styles.breadCrumbsBox}>	
 			  <Breadcrumbs className={styles.breadCrumbs}>
-			  <Link className={styles.link} color="inherit" href='' variant='inherit' >
+			  <Link className={styles.link} color="inherit" href='/' variant='inherit' >
 				Home
 			  </Link>
 			  <Link className={styles.link} color="inherit" href='About' variant='inherit' >
