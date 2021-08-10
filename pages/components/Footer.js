@@ -97,32 +97,32 @@ export default function Footer(){
 	const classes = useStyles();
 
 	return(
-		<>
-		<Col className={styles.marginLeft}>
-			<Row>		
-				<box className={classes.socialList}>
-					<TelegramIcon className={classes.icon} />
-					<RedditIcon className={classes.icon} />
-					<InstagramIcon className={classes.icon} />
-					<TwitterIcon  className={classes.icon} />
-					<FacebookIcon className={classes.icon} />
-				</box>
-			</Row>
-			<Row>
-				<box className={classes.contactForm}>
-					<form className={classes.form}>
-						<TextField id="outlined-basic" className={classes.textInput} label="Your email" variant="standard" />
+		<div className={styles.footer}>
+
+		
+				<div className={styles.socialList}>
+					<TelegramIcon className={styles.icon} />
+					<RedditIcon className={styles.icon} />
+					<InstagramIcon className={styles.icon} />
+					<TwitterIcon  className={styles.icon} />
+					<FacebookIcon className={styles.icon} />
+				</div>
+
+
+				<div className={styles.contactForm}>
+					<form className={styles.form}>
+						<TextField id="outlined-basic" className={styles.textInput} label="Your email" variant="standard" />
 						<Button variant="contained">Subscribe</Button>
 					</form>
-				</box>
-			</Row>
-		</Col>
+				</div>
+
+
 		<div className={styles.listLink}>
-		<Row xs={1} sm={2} md={3} lg={4} xl={4}>
+		<Row xs={2} sm={2} md={3} lg={4} xl={4}>
 				<ul>
 					<li><h6>Listing forms</h6></li>
-					<li className={classes.listLinkItem} onClick={() => {window.open('https://forms.gle/gPdXUWtGHCwm4xYo9');}}>Token listing</li>
-					<li className={classes.listLinkItem} onClick={() => {window.open('https://forms.gle/PSDWWFtk7P71MEQT9');}}>Countdown listing</li>
+					<li className={styles.listLinkItem} onClick={() => {window.open('https://forms.gle/gPdXUWtGHCwm4xYo9');}}>Token listing</li>
+					<li className={styles.listLinkItem} onClick={() => {window.open('https://forms.gle/PSDWWFtk7P71MEQT9');}}>Countdown listing</li>
 				</ul>
 				<ul>
 					<li><h6>Tokens</h6></li>
@@ -142,8 +142,8 @@ export default function Footer(){
 				</ul>		
 		</Row>
 		</div>
-		<Typography className={classes.copyRight}variant='h6'>© 2020 Copyright: Hidrogen All Rights Reserved</Typography>
-		</>
+		<div className={styles.copyRight}><h6>© 2020 Copyright: Hidrogen All Rights Reserved</h6></div>
+		</div>
 	);
 
 }

@@ -161,26 +161,32 @@ export default function Home(props) {
 			
 			<div className={styles.coinGeckoChart}>
 				<h5>Sponsored tokens</h5>
-				<Row xs={1} sm={2} md={'auto'} lg={'3'} xl={'auto'} >
-					
-					<coingecko-coin-price-chart-widget  coin-id="gmr-finance" currency="usd" height="300" width='300' locale="pt"></coingecko-coin-price-chart-widget>
-
-					<coingecko-coin-price-chart-widget  coin-id="nft-art-finance" currency="usd" height="300" width='300' locale="pt"></coingecko-coin-price-chart-widget>
-
-					<coingecko-coin-price-chart-widget  coin-id="shiba-bsc" currency="usd" height="300" width='300' locale="pt"></coingecko-coin-price-chart-widget>	
-					
-					<coingecko-coin-price-chart-widget  coin-id="safemoon" currency="usd" height="300" width='300' locale="pt"></coingecko-coin-price-chart-widget>
-					
-					<coingecko-coin-price-chart-widget  coin-id="pancakeswap-token" currency="usd" height="300" width='300' locale="pt"></coingecko-coin-price-chart-widget>
-					
-					<coingecko-coin-price-chart-widget  coin-id="aquagoat" currency="usd" height="300" width='300' locale="pt"></coingecko-coin-price-chart-widget>
-					
+				<Row xs={2} sm={2} md={2} lg={3} xl={4} >
+					<div className={styles.coinGecko}>
+						<coingecko-coin-price-chart-widget  coin-id="gmr-finance" currency="usd" height="300" width='300' locale="pt"></coingecko-coin-price-chart-widget>
+					</div>
+					<div className={styles.coinGecko}>
+						<coingecko-coin-price-chart-widget className={styles.coinGecko} coin-id="nft-art-finance" currency="usd" height="300" width='300' locale="pt"></coingecko-coin-price-chart-widget>
+					</div>
+					<div className={styles.coinGecko}>
+						<coingecko-coin-price-chart-widget className={styles.coinGecko}  coin-id="shiba-bsc" currency="usd" height="300" width='300' locale="pt"></coingecko-coin-price-chart-widget>	
+					</div>
+					<div className={styles.coinGecko}>
+						<coingecko-coin-price-chart-widget className={styles.coinGecko}  coin-id="safemoon" currency="usd" height="300" width='300' locale="pt"></coingecko-coin-price-chart-widget>
+					</div>
+					<div className={styles.coinGecko}>
+						<coingecko-coin-price-chart-widget className={styles.coinGecko}  coin-id="pancakeswap-token" currency="usd" height="300" width='300' locale="pt"></coingecko-coin-price-chart-widget>
+					</div>
+					<div className={styles.coinGecko}>
+						<coingecko-coin-price-chart-widget className={styles.coinGecko}  coin-id="aquagoat" currency="usd" height="300" width='300' locale="pt"></coingecko-coin-price-chart-widget>
+					</div>
 					
 				</Row>
 			</div>
-		<Footer />		
+				
 			
-		</Container>	
+		</Container>
+		<Footer />	
     </div>
 	
 	
