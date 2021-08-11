@@ -100,7 +100,7 @@ export default function About(){
 							<Card.Title>$900</Card.Title>
 								<List>
 									<ListItem>
-										Crypto dashboard with 0x, Coing Gecko, Coin Marketcap and PancakeSwap API's integration.
+										Crypto dashboard with 0x, Coing Gecko, Coin Marketcap and PancakeSwap APIs integration.
 									</ListItem>
 									<ListItem>
 										Full dAPP with native token price chart.
