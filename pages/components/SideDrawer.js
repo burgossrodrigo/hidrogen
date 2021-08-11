@@ -13,7 +13,7 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import TelegramIcon from '@material-ui/icons/Telegram';
 import Icon from '@material-ui/core/Icon';
 import BarChartIcon from '@material-ui/icons/BarChart';
-import Link from '@material-ui/core';
+import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles({
   list: {

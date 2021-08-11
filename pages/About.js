@@ -80,13 +80,13 @@ export default function About(){
 						</Card>
 						<Card className={styles.card} raised={true}>
 							<Card.Body>
-							<Card.Title>$600</Card.Title>
+							<Card.Title>$800</Card.Title>
 								<List>
 									<ListItem>
-										Token Smart Contract.
+										NFT minting platform.
 									</ListItem>
 									<ListItem>
-										Full dAPP with native token price chart.
+										Full dAPP with native token and price chart.
 									</ListItem>
 									<ListItem>
 										Telegram price bot.
@@ -97,16 +97,16 @@ export default function About(){
 						
 						<Card className={styles.card} raised={true}>
 							<Card.Body>
-							<Card.Title>$600</Card.Title>
+							<Card.Title>$900</Card.Title>
 								<List>
 									<ListItem>
-										Token Smart Contract.
+										Crypto dashboard with 0x, Coing Gecko, Coin Marketcap and PancakeSwap API's integration.
 									</ListItem>
 									<ListItem>
 										Full dAPP with native token price chart.
 									</ListItem>
 									<ListItem>
-										Telegram price bot.
+										Telegram price bot for the listed tokens.
 									</ListItem>
 								</List>
 							</Card.Body>
@@ -118,16 +118,16 @@ export default function About(){
 				<Row xs={1} sm={2} md={'auto'} lg={'auto'} xl={'auto'}>
 						<Card className={styles.card} raised={true}>
 							<Card.Body>
-							<Card.Title>$600</Card.Title>
+							<Card.Title>$30/Week</Card.Title>
 								<List>
 									<ListItem>
-										Token Smart Contract.
+										Sponsor a token of your choice on our platform. 
 									</ListItem>
 									<ListItem>
-										Full dAPP with native token price chart.
+										Coin Gecko price, token price, social links in every portal page.
 									</ListItem>
 									<ListItem>
-										Telegram price bot.
+										Your token price on our Hidrogen Price Bot.
 									</ListItem>
 								</List>
 							</Card.Body>
@@ -135,30 +135,13 @@ export default function About(){
 
 						<Card className={styles.card} raised={true}>
 							<Card.Body>
-							<Card.Title>$600</Card.Title>
+							<Card.Title>$50/week</Card.Title>
 								<List>
 									<ListItem>
-										Token Smart Contract.
+										Your countdown highlighted in every of our page.
 									</ListItem>
 									<ListItem>
-										Full dAPP with native token price chart.
-									</ListItem>
-									<ListItem>
-										Telegram price bot.
-									</ListItem>
-								</List>
-							</Card.Body>
-						</Card>
-
-						<Card className={styles.card} raised={true}>
-							<Card.Body>
-							<Card.Title>$600</Card.Title>
-								<List>
-									<ListItem>
-										Token Smart Contract.
-									</ListItem>
-									<ListItem>
-										Full dAPP with native token price chart.
+										Your token chart highlighted in every of our page.
 									</ListItem>
 									<ListItem>
 										Telegram price bot.
