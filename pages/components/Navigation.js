@@ -60,7 +60,7 @@ export default function Navigation(){
 			<Box className={styles.menuIcon} >
 					<SideDrawer className={styles.menuIcon} >
 						<IconButton className={styles.menuIcon} >
-							<MenuIcon className={styles.menuIcon} color="primary" />
+							<MenuIcon className={styles.menuIcon} fontSize='large' color="primary" />
 						</IconButton>
 					</SideDrawer>
 			</Box>				

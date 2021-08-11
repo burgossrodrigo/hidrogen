@@ -118,7 +118,7 @@ export default function Footer(){
 
 
 		<div className={styles.listLink}>
-		<Row xs={2} sm={2} md={3} lg={4} xl={4}>
+		<Row xs={1} sm={2} md={3} lg={4} xl={4}>
 				<ul>
 					<li><h6>Listing forms</h6></li>
 					<li className={styles.listLinkItem} onClick={() => {window.open('https://forms.gle/gPdXUWtGHCwm4xYo9');}}>Token listing</li>

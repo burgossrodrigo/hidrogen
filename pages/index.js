@@ -180,7 +180,12 @@ export default function Home(props) {
 					<div className={styles.coinGecko}>
 						<coingecko-coin-price-chart-widget className={styles.coinGecko}  coin-id="aquagoat" currency="usd" height="300" width='300' locale="pt"></coingecko-coin-price-chart-widget>
 					</div>
-					
+					<div className={styles.coinGecko}>
+						<coingecko-coin-price-chart-widget  coin-id="elongate" currency="usd" height="300" locale="pt" width="300"></coingecko-coin-price-chart-widget>
+					</div>
+					<div className={styles.coinGecko}>
+						<coingecko-coin-price-chart-widget  coin-id="kimjongmoon" currency="usd" height="300" locale="pt" width="300"></coingecko-coin-price-chart-widget>
+					</div>
 				</Row>
 			</div>
 				
