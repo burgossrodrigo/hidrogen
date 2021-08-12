@@ -46,7 +46,7 @@
 		
 			.card{
 		
-		height: 35vh;
+		height: max-content;
 		marginTop: 15vh;
 		margin: 6px;
 		margin-top: 5vh;
@@ -131,6 +131,13 @@
 	.copyRight{
 		
 		margin-left: 15vw;
+		
+	}
+	
+	.carousel{
+		
+		position: relative;
+		float: left;
 		
 	}
 	

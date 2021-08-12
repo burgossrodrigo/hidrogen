@@ -46,10 +46,10 @@ export default function Pancake(props) {
 				<Col>
 					<Card className={styles.card} raised={true}>
 						<Card.Body>
-						<Card.Title>Meta</Card.Title>
-							<List>
-								<ListItem>
-									Symbol: {props.data.data.symbol}
+						<Card.Header><Card.Title>Meta</Card.Title></Card.Header>
+						<List>
+							<ListItem>
+								Symbol: {props.data.data.symbol}
 							</ListItem>
 							<ListItem>
 								Price USD: {props.data.data.price}
@@ -57,14 +57,14 @@ export default function Pancake(props) {
 							<ListItem>
 								Price BNB: {props.data.data.price_BNB}
 							</ListItem>
-							</List>
+						</List>
 						</Card.Body>
 					</Card>
 				</Col>
 				<Col>
 					<Card className={styles.card} raised={true}>
 						<Card.Body>
-						<Card.Title>Supply</Card.Title>
+						<Card.Header><Card.Title>Supply</Card.Title></Card.Header>
 							<List>
 								<ListItem>
 									Total supply: {props.dataMaxSupply.result}

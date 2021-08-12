@@ -64,7 +64,7 @@ export default function About(){
 				<Row xs={1} sm={2} md={'auto'} lg={'auto'} xl={'auto'} >
 						<Card className={styles.card} raised={true}>
 							<Card.Body>
-							<Card.Title>$600</Card.Title>
+							<Card.Header><Card.Title>$600</Card.Title></Card.Header>
 								<List>
 									<ListItem>
 										Token Smart Contract.
@@ -80,7 +80,7 @@ export default function About(){
 						</Card>
 						<Card className={styles.card} raised={true}>
 							<Card.Body>
-							<Card.Title>$800</Card.Title>
+							<Card.Header><Card.Title>$800</Card.Title></Card.Header>
 								<List>
 									<ListItem>
 										NFT minting platform.
@@ -97,7 +97,7 @@ export default function About(){
 						
 						<Card className={styles.card} raised={true}>
 							<Card.Body>
-							<Card.Title>$900</Card.Title>
+							<Card.Header><Card.Title>$900</Card.Title></Card.Header>
 								<List>
 									<ListItem>
 										Crypto dashboard with 0x, Coing Gecko, Coin Marketcap and PancakeSwap APIs integration.
@@ -118,7 +118,7 @@ export default function About(){
 				<Row xs={1} sm={2} md={'auto'} lg={'auto'} xl={'auto'}>
 						<Card className={styles.card} raised={true}>
 							<Card.Body>
-							<Card.Title>$30/Week</Card.Title>
+							<Card.Header><Card.Title>$30/Week</Card.Title></Card.Header>
 								<List>
 									<ListItem>
 										Sponsor a token of your choice on our platform. 
@@ -135,7 +135,7 @@ export default function About(){
 
 						<Card className={styles.card} raised={true}>
 							<Card.Body>
-							<Card.Title>$50/week</Card.Title>
+							<Card.Header><Card.Title>$50/week</Card.Title></Card.Header>
 								<List>
 									<ListItem>
 										Your countdown highlighted in every of our page.
