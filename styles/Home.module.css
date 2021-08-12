@@ -97,8 +97,8 @@
 	
 	.icon{
 		
-		margin-left: 5vw;
 		margin-bottom: 5vh;
+		position: relative;
 		
 	}
 	
@@ -138,6 +138,14 @@
 		
 		position: relative;
 		float: left;
+		
+	}
+	
+			.socialList{
+		
+	position: relative;
+    margin-bottom: 5vh;
+
 		
 	}
 	
@@ -224,9 +232,11 @@
 	
 		.socialList{
 		
-	position: relative;
-    margin-left: 48vw;
+    position: relative;
     margin-bottom: 5vh;
+    align-self: center;
+    width: max-content;
+    margin-left: 40vw;
 		
 	}
 
@@ -254,6 +264,7 @@
 		
 		margin-top: 15vw;
 		align-items: center;
+		font-size: 2vw;
 		
 	}	
 
@@ -268,7 +279,9 @@
 
 		.contactForm{
 		
-		margin-left: 15vw;
+		width: max-content;
+		margin-left: 35vw;
+		margin-bottom: 5vh;
 		
 	}	
 	

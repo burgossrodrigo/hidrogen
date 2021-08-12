@@ -101,11 +101,11 @@ export default function Footer(){
 
 		
 				<div className={styles.socialList}>
-					<TelegramIcon className={styles.icon} />
-					<RedditIcon className={styles.icon} />
-					<InstagramIcon className={styles.icon} />
-					<TwitterIcon  className={styles.icon} />
-					<FacebookIcon className={styles.icon} />
+					<TelegramIcon fontSize='large' className={styles.icon} />
+					<RedditIcon fontSize='large' className={styles.icon} />
+					<InstagramIcon fontSize='large' className={styles.icon} />
+					<TwitterIcon  fontSize='large' className={styles.icon} />
+					<FacebookIcon fontSize='large' className={styles.icon} />
 				</div>
 
 

@@ -46,10 +46,10 @@ export default function Pancake(props) {
 								Symbol: {props.data.data.symbol}
 							</ListItem>
 							<ListItem>
-								Price USD: USD {formatDollar(props.data.data.price, 3)}
+								Price USD: {formatDollar(props.data.data.price, 3)}
 							</ListItem>
 							<ListItem>
-								Price BNB: BNB {formatDollar(props.data.data.price_BNB, 3)}
+								Price BNB: {formatDollar(props.data.data.price_BNB, 3)}
 							</ListItem>
 						</List>
 						</Card.Body>
