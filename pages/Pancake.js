@@ -18,18 +18,15 @@ export default function Pancake(props) {
 	const formatPercent = number =>
 	`${new Number(number).toFixed(2)}%`
 	
-	const formatDollar = (number, maxSignificantDigits) =>
-	new Intl.NumberFormat(
-	
-		'en-US',
-		{
-			
-			style: 'currency',
-			currency: 'usd'
-			
-		}
-	
-	)
+  const formatDollar = (number, maximumSignificantDigits) =>
+    new Intl.NumberFormat(
+      'en-US', 
+      { 
+        style: 'currency', 
+        currency: 'USD',
+        maximumSignificantDigits
+      })
+      .format(number);
 		
   return (
 		<div>
@@ -67,7 +64,7 @@ export default function Pancake(props) {
 			</tbody>
 		</Table>
 		
-				<Table className={styles.tableSmall} size="lg" striped bordered hover aria-label='pancakeswap-api'>
+				<Table className={styles.tableSmall} size="xs" striped bordered hover aria-label='pancakeswap-api'>
 			<thead>
 				<tr>
 					<th>Token Name</th>
@@ -81,7 +78,7 @@ export default function Pancake(props) {
 				
 				<tr key={Object.keys(props.data.data)}>
 					<th>{token.name}</th>					
-					<th>USD {token.price}</th>
+					<th>USD {formatDollar(token.price, 2)}</th>
 				</tr>
 				
 	
