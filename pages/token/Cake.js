@@ -15,21 +15,15 @@ export default function Pancake(props) {
 
 
 		
-	const formatPercent = number =>
-	`${new Number(number).toFixed(2)}%`
-	
-	const formatDollar = (number, maxSignificantDigits) =>
-	new Intl.NumberFormat(
-	
-		'en-US',
-		{
-			
-			style: 'currency',
-			currency: 'usd'
-			
-		}
-	
-	)
+  const formatDollar = (number, maximumSignificantDigits) =>
+    new Intl.NumberFormat(
+      'en-US', 
+      { 
+        style: 'currency', 
+        currency: 'USD',
+        maximumSignificantDigits
+      })
+      .format(number);
 		
   return (
 		<div>
@@ -52,10 +46,10 @@ export default function Pancake(props) {
 								Symbol: {props.data.data.symbol}
 							</ListItem>
 							<ListItem>
-								Price USD: {props.data.data.price}
+								Price USD: USD {formatDollar(props.data.data.price, 3)}
 							</ListItem>
 							<ListItem>
-								Price BNB: {props.data.data.price_BNB}
+								Price BNB: BNB {formatDollar(props.data.data.price_BNB, 3)}
 							</ListItem>
 						</List>
 						</Card.Body>
@@ -67,10 +61,10 @@ export default function Pancake(props) {
 						<Card.Header><Card.Title>Supply</Card.Title></Card.Header>
 							<List>
 								<ListItem>
-									Total supply: {props.dataMaxSupply.result}
+									Total supply: {new Intl.NumberFormat(['en-US']).format(props.dataMaxSupply.result)}
 							</ListItem>
 							<ListItem>
-								Circulatin supply: {props.dataCirculatingSupply.result}
+								Circulatin supply: {new Intl.NumberFormat(['en-US']).format(props.dataCirculatingSupply.result)}
 							</ListItem>
 							</List>
 						</Card.Body>
