@@ -36,7 +36,7 @@ export default function Pancake(props) {
 			<link rel="icon" href="/favicon.ico" />
 		  </Head>		
 		<Navigation />
-		<Container className={styles.container}>
+		<Container>
 		<Table className={styles.table} size="lg" striped bordered hover aria-label='pancakeswap-api'>
 			<thead>
 				<tr>
