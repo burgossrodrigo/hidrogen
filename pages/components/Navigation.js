@@ -52,7 +52,7 @@ export default function Navigation(){
 			  <Link className={styles.link} color="inherit" href='' variant='inherit' >
 				Listed Tokens
 			  </Link>
-			  <Link className={styles.link} color="inherit" href='' variant='inherit' >
+			  <Link className={styles.link} color="inherit" href='Block' variant='inherit' >
 				Block reading
 			  </Link>			  
 			</Breadcrumbs>
