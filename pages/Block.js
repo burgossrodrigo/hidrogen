@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Navigation from './components/Navigation.js';
 import { makeStyles } from '@material-ui/core/styles';
 import styles from '../styles/Home.module.css';
-import { Container, tr, Table, tbody, th, thead, Row, Col, Card} from 'react-bootstrap';
+import { Container, tr, Table, tbody, th, thead, Row, Col } from 'react-bootstrap';
 import Footer from './components/Footer.js';
 import Head from 'next/head';
 import { Typography } from '@material-ui/core';
@@ -43,7 +43,7 @@ export default function Pancake(props) {
 				
 
 					
-					<tr>
+					<tr key={block.id}>
 						<Link href={`https://bscscan.com/address/${block.reference.address}`}><th style={{cursor: 'pointer'}}>{block.reference.address}</th></Link>					
 						<th>{block.block.height}</th>
 					</tr>
