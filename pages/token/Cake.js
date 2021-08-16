@@ -6,30 +6,91 @@ import { Container, tr, Table, tbody, th, thead, Row, Col, Card} from 'react-boo
 import Footer from '../components/Footer.js';
 import Head from 'next/head';
 import { Typography, List, ListItem } from '@material-ui/core';
+import {
+  ApolloClient,
+  gql,
+  NormalizedCacheObject,
+  InMemoryCache 
+} from '@apollo/client';
 
 export default function Pancake(props) {
 		
 		 const [tokenData, setTokenData] = useState({});
 		 var tokens = Object.entries(props.data);
-		 console.log(props.dataMaxSupply);
+		 console.log(props.dataMaxSupply.ethereum.dexTrades);
 
 
 		
-  const formatDollar = (number, maximumSignificantDigits) =>
-    new Intl.NumberFormat(
-      'en-US', 
-      { 
-        style: 'currency', 
-        currency: 'USD',
-        maximumSignificantDigits
-      })
-      .format(number);
+	  const formatDollar = (number, maximumSignificantDigits) =>
+		new Intl.NumberFormat(
+		  'en-US', 
+		  { 
+			style: 'currency', 
+			currency: 'USD',
+			maximumSignificantDigits
+		  })
+		  .format(number);
+		  
+		(async function(){
+		await widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
+		var query = new widgets.query(`
+			  
+	{
+	   ethereum (network: bsc){
+		dexTrades( options: {desc: "date.date"},
+		  smartContractAddress: 
+		  {is:"0x1b96b92314c44b159149f7e0303511fb2fc4774f"}
+		) {
+		  count
+		  tradeAmount(in:USD)
+		  date{
+			date(format: "%Y-%m-%d")
+		  }
+		}
+	  }
+	}
+	`);
+		var wdts = new widgets.chartByTime('#pancake_pool_date_wise_trade_vol', query, 'ethereum.dexTrades', {
+	 "title": "Pancake Pool's Trade vol date wise",
+	 "chartOptions": {
+	  "vAxes": {
+	   "0": {
+		"title": "Trade Volume"
+	   }
+	  },
+	  "seriesType": "bars",
+	  "series": {
+	   "0": {
+		"color": "#28a745"
+	   }
+	  }
+	 },
+	 "dataOptions": [
+	  {
+	   "title": {
+		"label": "Date",
+		"type": "date"
+	   },
+	   "path": "date.date"
+	  },
+	  {
+	   "title": "Trade Amount",
+	   "path": "tradeAmount"
+	  }
+	 ]
+	});
+		query.request();
+		})();
+
+	console.log(props.transactionData);		
 		
   return (
 		<div>
 		  <Head>
 			<title>Hidrogen</title>
 			<meta name="Hidrogen - Pancake TOP 100" content="Binance Smart Chain token dashboard" />
+			<script async src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/widgets.js"></script>
+			<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/assets/css/widgets.css" />
 			<link rel="icon" href="/favicon.ico" />
 		  </Head>		
 		<Navigation />
@@ -69,7 +130,10 @@ export default function Pancake(props) {
 							</List>
 						</Card.Body>
 					</Card>
-				</Col>	
+				</Col>
+				<Col>
+					<div id="pancake_pool_date_wise_trade_vol"></div>
+				</Col>
 			</Row>
 		</div>	
 		<Footer />		
@@ -88,6 +152,7 @@ export async function getStaticProps(context) {
   const dataMaxSupply = await resMaxSupply.json();
   const resCirculatingSupply = await fetch("https://api.bscscan.com/api?module=stats&action=tokenCsupply&contractaddress=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82&&apikey=VPBWF48NC149A1VJA5MDHUNJK74N1KJB2S")
   const dataCirculatingSupply = await resCirculatingSupply.json();
+
   
   if (!data || !dataMaxSupply) {
     return {
@@ -96,6 +161,7 @@ export async function getStaticProps(context) {
   }
 
   return {
+	  
     props: { data, dataMaxSupply, dataCirculatingSupply } // will be passed to the page component as props
 
   }
