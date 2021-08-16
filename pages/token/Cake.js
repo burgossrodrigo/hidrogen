@@ -14,13 +14,7 @@ import {
 } from '@apollo/client';
 
 export default function Pancake(props) {
-		
-		 const [tokenData, setTokenData] = useState({});
-		 var tokens = Object.entries(props.data);
-		 console.log(props.dataMaxSupply.ethereum.dexTrades);
 
-
-		
 	  const formatDollar = (number, maximumSignificantDigits) =>
 		new Intl.NumberFormat(
 		  'en-US', 
@@ -39,7 +33,7 @@ export default function Pancake(props) {
 	   ethereum (network: bsc){
 		dexTrades( options: {desc: "date.date"},
 		  smartContractAddress: 
-		  {is:"0x1b96b92314c44b159149f7e0303511fb2fc4774f"}
+		  {is:"0xAf85eBdea3870eF61e3459487cb03Ccdc2ef6e77"}
 		) {
 		  count
 		  tradeAmount(in:USD)
@@ -107,10 +101,10 @@ export default function Pancake(props) {
 								Symbol: {props.data.data.symbol}
 							</ListItem>
 							<ListItem>
-								Price USD: {formatDollar(props.data.data.price, 3)}
+								Price USD: {formatDollar(props.data.data.price, 18)}
 							</ListItem>
 							<ListItem>
-								Price BNB: {formatDollar(props.data.data.price_BNB, 3)}
+								Price BNB: {formatDollar(props.data.data.price_BNB, 18)}
 							</ListItem>
 						</List>
 						</Card.Body>
