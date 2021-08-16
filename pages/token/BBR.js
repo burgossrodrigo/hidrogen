@@ -16,7 +16,7 @@ import {
 export default function Pancake(props) {
 		
 		 const [tokenData, setTokenData] = useState({});
-		 var tokens = Object.entries(props.data);
+		 const contract = '0x7815e4ca4b792be3fc524c0a03e1b6161b369348';
 
 
 		
@@ -96,6 +96,7 @@ export default function Pancake(props) {
 		<Container>
 		<div className={styles.token}>
 			<h3>{props.data.data.name} </h3>
+			<h4>Contract:</h4> 0x7815e4ca4b792be3fc524c0a03e1b6161b369348
 			<Row xs={1} sm={2} md={2} lg={2} xl={2}>
 				<Col>
 					<Card className={styles.card} raised={true}>
