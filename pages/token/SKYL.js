@@ -139,7 +139,6 @@ export default function Pancake(props) {
 				</Col>
 			</Row>
 		</div>
-		<div className={styles.rugAllert}><h2>DEV rugged liquidity pool</h2></div>
 		<Footer />		
 		</Container>
 		
