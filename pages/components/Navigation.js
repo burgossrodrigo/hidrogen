@@ -24,7 +24,7 @@ import hidrogen from '../img/hidrogen.png';
 export default function Navigation(){
 	
 		
-			return (<Box>
+			return (<Box className={styles.navigation}>
 			
 			<Toolbar>
 

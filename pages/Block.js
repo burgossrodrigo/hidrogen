@@ -81,7 +81,7 @@ query: gql`
       smartContractAddress: {is: "0xBCfCcbde45cE874adCB698cC183deBcF17952812"}
       smartContractEvent: {is: "PairCreated"}
       argument: {is: "pair"}
-      options: {desc: "block.height", limit: 9}
+      options: {desc: "block.height", limit: 8}
     ) {
       block {
         height

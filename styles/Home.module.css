@@ -23,6 +23,7 @@
 		.menuIcon{
 		
 			float: right;
+			margin-left: 43vw;
 			
 		}
 		
@@ -147,11 +148,17 @@
 		
 	}
 	
-			.socialList{
+	.socialList{
 		
 	position: relative;
     margin-bottom: 5vh;
 
+		
+	}
+	
+	.navigation{
+		
+		width: 139%;
 		
 	}
 	
