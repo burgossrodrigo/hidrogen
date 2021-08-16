@@ -38,7 +38,7 @@ export default function Pancake(props) {
 	   ethereum (network: bsc){
 		dexTrades( options: {desc: "date.date"},
 		  smartContractAddress: 
-		  {is:"0xAf85eBdea3870eF61e3459487cb03Ccdc2ef6e77"}
+		  {is:"0x57cb3e01aa9fd9eb05eb2e2b4ed2c3965481c57e"}
 		) {
 		  count
 		  tradeAmount(in:USD)
