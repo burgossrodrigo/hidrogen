@@ -31,7 +31,7 @@ export default function Pancake(props) {
 		  </Head>		
 		<Navigation />
 		<Container>
-			<Table className={styles.table} striped bordered hover aria-label='new-pools-api'>
+			<Table className={styles.tableBlock} striped bordered hover aria-label='new-pools-api'>
 				<thead>
 					<tr>
 						<th>Pair address</th>
