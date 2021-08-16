@@ -53,7 +53,7 @@ export default function Navigation(){
 				Listed Tokens
 			  </Link>
 			  <Link className={styles.link} color="inherit" href='Block' variant='inherit' >
-				Block reading
+				<Badge color="primary" variant="dot">New Pairs</Badge>
 			  </Link>			  
 			</Breadcrumbs>
 			</div>
