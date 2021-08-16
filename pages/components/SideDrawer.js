@@ -14,6 +14,7 @@ import TelegramIcon from '@material-ui/icons/Telegram';
 import Icon from '@material-ui/core/Icon';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import Link from '@material-ui/core/Link';
+import Badge from '@material-ui/core/Badge'
 
 const useStyles = makeStyles({
   list: {
@@ -67,7 +68,7 @@ export default function TemporaryDrawer({children, anchor, left}) {
 		</ListItem>
 		<Divider />
 		<ListItem>
-			<Link href='Block'>News Pairs</Link>
+			<Link href='Block'><Badge color="primary" variant="dot">News Pairs</Badge></Link>
 		</ListItem>
 		<ListItem>
 			CountDowns
