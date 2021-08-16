@@ -67,6 +67,9 @@ export default function TemporaryDrawer({children, anchor, left}) {
 		</ListItem>
 		<Divider />
 		<ListItem>
+			<Link href='Block'>News Pairs</Link>
+		</ListItem>
+		<ListItem>
 			CountDowns
 		</ListItem>
 		<Divider />

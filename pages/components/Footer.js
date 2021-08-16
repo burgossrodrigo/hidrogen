@@ -142,7 +142,7 @@ export default function Footer(){
 				</ul>		
 		</Row>
 		</div>
-		<div className={styles.copyRight}><h6>© 2020 Copyright: Hidrogen All Rights Reserved</h6></div>
+		<div className={styles.copyRight}><h6>© 2021 Copyright: Hidrogen All Rights Reserved</h6></div>
 		</div>
 	);
 

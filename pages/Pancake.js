@@ -37,7 +37,7 @@ export default function Pancake(props) {
 		  </Head>		
 		<Navigation />
 		<Container>
-		<Table className={styles.table} size="lg" striped bordered hover aria-label='pancakeswap-api'>
+		<Table className={styles.tableSmall} size="lg" striped bordered hover aria-label='pancakeswap-api'>
 			<thead>
 				<tr>
 					<th>Token Name</th>
