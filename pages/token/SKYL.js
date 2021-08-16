@@ -16,7 +16,7 @@ import {
 export default function Pancake(props) {
 		
 		 const [tokenData, setTokenData] = useState({});
-		 const contract = '0x7815e4ca4b792be3fc524c0a03e1b6161b369348';
+		 const contract = '0x57cb3e01aa9fd9eb05eb2e2b4ed2c3965481c57e';
 
 
 		
@@ -96,7 +96,7 @@ export default function Pancake(props) {
 		<Container>
 		<div className={styles.token}>
 			<h3>{props.data.data.name} </h3>
-			<h4>Contract:</h4> 0x7815e4ca4b792be3fc524c0a03e1b6161b369348
+			<h4>Contract:</h4> 0x57cb3e01aa9fd9eb05eb2e2b4ed2c3965481c57e
 			<Row xs={1} sm={2} md={2} lg={2} xl={2}>
 				<Col>
 					<Card className={styles.card} raised={true}>
@@ -134,8 +134,12 @@ export default function Pancake(props) {
 				<Col>
 					<div id="pancake_pool_date_wise_trade_vol"></div>
 				</Col>
+				<Col>
+					
+				</Col>
 			</Row>
-		</div>	
+		</div>
+		<div className={styles.rugAllert}><h2>DEV rugged liquidity pool</h2></div>
 		<Footer />		
 		</Container>
 		
@@ -146,67 +150,20 @@ export default function Pancake(props) {
 };
 
 export async function getStaticProps(context) {	
-  const resToken = await fetch("https://api.pancakeswap.info/api/v2/tokens/0x7815e4ca4b792be3fc524c0a03e1b6161b369348");
+  const resToken = await fetch("https://api.pancakeswap.info/api/v2/tokens/0x57cb3e01aa9fd9eb05eb2e2b4ed2c3965481c57e");
   const data = await resToken.json();
-  const resMaxSupply = await fetch("https://api.bscscan.com/api?module=stats&action=tokensupply&contractaddress=0x7815e4ca4b792be3fc524c0a03e1b6161b369348&apikey=VPBWF48NC149A1VJA5MDHUNJK74N1KJB2S")
+  const resMaxSupply = await fetch("https://api.bscscan.com/api?module=stats&action=tokensupply&contractaddress=0x57cb3e01aa9fd9eb05eb2e2b4ed2c3965481c57e&apikey=VPBWF48NC149A1VJA5MDHUNJK74N1KJB2S")
   const dataMaxSupply = await resMaxSupply.json();
-  const resCirculatingSupply = await fetch("https://api.bscscan.com/api?module=stats&action=tokenCsupply&contractaddress=0x7815e4ca4b792be3fc524c0a03e1b6161b369348&&apikey=VPBWF48NC149A1VJA5MDHUNJK74N1KJB2S")
+  const resCirculatingSupply = await fetch("https://api.bscscan.com/api?module=stats&action=tokenCsupply&contractaddress=0x57cb3e01aa9fd9eb05eb2e2b4ed2c3965481c57e&&apikey=VPBWF48NC149A1VJA5MDHUNJK74N1KJB2S")
   const dataCirculatingSupply = await resCirculatingSupply.json();
   
-  const { dataTransactions } = await client.query({
 
-
-
-query: gql`
-
-{
-ethereum(network: bsc){
-dexTrades(options: {limit: 1, desc: "block.height"},
-exchangeName: {in:["Pancake","Pancake v2"]}
-baseCurrency: {is: "0x7815e4ca4b792be3fc524c0a03e1b6161b369348"}){
-transaction {
-hash
-}
-smartContract{
-address{
-address
-}
-contractType
-currency{
-name
-}}
-tradeIndex
-date {
-date
-}
-block {
-height
-}
-buyAmount
-buyAmountInUsd: buyAmount(in: USD)
-buyCurrency {
-symbol
-address
-}
-sellAmount
-sellAmountInUsd: sellAmount(in: USD)
-sellCurrency {
-symbol
-address
-}
-sellAmountInUsd: sellAmount(in: USD)
-tradeAmount(in: USD)
-transaction{
-gasValue
-gasPrice
-gas
-}}
-}}
-
-
-`,
-
-});
+    const client = new ApolloClient({
+    
+    uri: "https://graphql.bitquery.io",
+    cache: new InMemoryCache(),
+    
+    });
   
   if (!data || !dataMaxSupply) {
     return {
@@ -216,7 +173,7 @@ gas
 
   return {
 	  
-    props: { data, dataMaxSupply, dataCirculatingSupply, dataTransactions } // will be passed to the page component as props
+    props: { data, dataMaxSupply, dataCirculatingSupply  } // will be passed to the page component as props
 
   }
 }
