@@ -16,7 +16,7 @@ import {
 export default function Pancake(props) {
 		
 		 const [tokenData, setTokenData] = useState({});
-		 const contract = '0x57cb3e01aa9fd9eb05eb2e2b4ed2c3965481c57e';
+		 const contract = '0xb7025f278373e9c87368a47d0c042c68be845c48';
 
 
 		
@@ -38,7 +38,7 @@ export default function Pancake(props) {
 	   ethereum (network: bsc){
 		dexTrades( options: {desc: "date.date"},
 		  smartContractAddress: 
-		  {is:"0x57cb3e01aa9fd9eb05eb2e2b4ed2c3965481c57e"}
+		  {is:"0xb7025f278373e9c87368a47d0c042c68be845c48"}
 		) {
 		  count
 		  tradeAmount(in:USD)

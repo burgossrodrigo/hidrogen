@@ -79,9 +79,7 @@ export default function Pancake(props) {
 	 ]
 	});
 		query.request();
-		})();
-
-	console.log(props.transactionData);		
+		})();		
 		
   return (
 		<div>
@@ -134,8 +132,12 @@ export default function Pancake(props) {
 				<Col>
 					<div id="pancake_pool_date_wise_trade_vol"></div>
 				</Col>
+				<Col>
+					
+				</Col>
 			</Row>
-		</div>	
+		</div>
+		<div className={styles.rugAllert}><h2>DEV rugged liquidity pool</h2></div>
 		<Footer />		
 		</Container>
 		
@@ -216,7 +218,7 @@ gas
 
   return {
 	  
-    props: { data, dataMaxSupply, dataCirculatingSupply, dataTransactions } // will be passed to the page component as props
+    props: { data, dataMaxSupply, dataCirculatingSupply } // will be passed to the page component as props
 
   }
 }
